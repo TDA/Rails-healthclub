@@ -21,6 +21,10 @@ class ClientWorkoutsController < ApplicationController
   def edit
   end
 
+  def find
+
+  end
+
   # POST /client_workouts
   # POST /client_workouts.json
   def create
