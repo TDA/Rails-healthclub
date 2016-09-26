@@ -1,0 +1,18 @@
+<h1>Listing Client Workouts for search '<%= params[:search_string] %>' </h1>
+<table>
+  <tr>
+    <th>Trainer</th>
+    <th>Duration mins</th>
+    <th>Date of workout</th>
+    <th>Paid amount</th>
+  </tr>
+<% @results.each do |result| %>
+  <tr>
+    <td><%= result.trainer %></td>
+    <td><%= result.duration_mins %></td>
+    <td><%= result.date_of_workout %></td>
+    <td><%= result.paid_amount %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'Back', client_workouts_path %>

@@ -22,7 +22,8 @@ class ClientWorkoutsController < ApplicationController
   end
 
   def find
-
+    search_string = params[:search_string]
+    @results = ClientWorkout.where(client_name: search_string)
   end
 
   # POST /client_workouts
