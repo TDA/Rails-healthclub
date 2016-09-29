@@ -23,7 +23,8 @@ class ClientWorkoutsController < ApplicationController
 
   def find
     search_string = params[:search_string]
-    @results = ClientWorkout.where(client_name: search_string)
+    # @results = ClientWorkout.where(client_name: search_string)
+    @results = ClientWorkout.where("client_name=? OR trainer=?", search_string, search_string)
   end
 
   # POST /client_workouts
